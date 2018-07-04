@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
 	
+	
+	#people
+	
+  get 'people/index'
+	get 'people/:id',to:'people#index'
+	
+	#post 'people', to:'people#index'
+	#post 'people/index'
+	
+	
+	
+	
+	
 	#struts でいうstruts.xml
 	
   resources :users
