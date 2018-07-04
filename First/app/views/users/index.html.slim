@@ -19,5 +19,14 @@ table
         td = link_to 'Destroy', user, data: { confirm: 'Are you sure?' }, method: :delete
 
 br
-
 = link_to 'New User', new_user_path
+
+br
+=check_box_tag 'checkbox',true,false,{}
+br
+= text_field_tag 'text_field'
+br
+= radio_button_tag 'gender', 'male'
+| 男
+= radio_button_tag 'gender', 'female', style: "display=block"
+| 女

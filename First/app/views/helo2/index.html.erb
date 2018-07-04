@@ -1,0 +1,20 @@
+
+<h1><%= @title%></h1>
+<p><%= @msg%></p>
+<p><%= @sex%></p>
+  <%# %>
+  <%= form_tag(controller:"helo2", action:"index") do %>
+	<%= text_field_tag("input1") %><br>
+	
+    <%= check_box_tag("check1") %>
+    <%= label_tag("check1","男") %>
+	<%= check_box_tag("check2") %>
+    <%= label_tag("check2","女") %>
+	
+	<%= radio_button_tag("dog","1") %>
+	<%= label_tag("dog_radio_1","犬派") %>
+	<%= radio_button_tag("cat","2") %>
+	<%= label_tag("cat_radio_2","猫派") %>
+	
+	<%= submit_tag("送信") %>
+  <% end %>
