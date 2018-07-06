@@ -1,0 +1,18 @@
+h1 People#Edit
+p = @msg
+
+=form_for(@person, url:{controller:'people', action:'update',id:@person.id}) do |form|
+  table
+    tr
+      th Name
+      td =form.text_field :name
+    tr
+      th Age
+      td =form.text_field :age
+	tr
+      th Mail
+      td =form.text_field :mail
+    tr
+      td
+      td =form.submit "Edit"
+

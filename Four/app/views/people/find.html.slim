@@ -1,0 +1,24 @@
+h1 People#Find
+p = @msg
+
+=form_tag(controller:'people', action:'find') do
+  table
+    tr
+      th Find
+      td =text_field_tag("find")
+    tr
+      th 
+      td =submit_tag("検索")
+
+-@people.each do |obj|
+  table
+    tr
+      th Id
+      th Name
+      th Age
+      th Mail
+    tr
+      td =obj.id
+      td =obj.name
+      td =obj.age
+      td =obj.mail
